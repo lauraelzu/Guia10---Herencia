@@ -48,7 +48,7 @@ después llenamos el atributo propio de la lavadora.
         l.setPeso(e.getPeso());
         System.out.println("=> Ingrese la carga permitida");
         l.setCarga(leer.nextInt());
-        l.precioFinal();
+        l.calcularPrecioFinal();
         return l;
     }
     
@@ -59,8 +59,8 @@ si la carga es menor o igual, no se incrementará el precio.
     */
    
     @Override
-    public void precioFinal(){
-        super.precioFinal();  ///precio base + aumento según peso y consumo
+    public void calcularPrecioFinal(){
+        super.calcularPrecioFinal();  ///precio base + aumento según peso y consumo
         
         //agrega funcionalidad
         if(carga>30){

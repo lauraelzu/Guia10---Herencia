@@ -56,6 +56,7 @@ después llenamos los atributos del televisor.
         
         Scanner leer = new Scanner(System.in);
         Electrodomestico e = super.crearElectrodomestico(); //no necesita instanciar, crea y llena  
+        
         System.out.println("=> Ingrese la resolución del televisor en pulgadas");
         Integer resol = leer.nextInt();
         System.out.println("=> Posee sintonizador TDT incorporado? (S/N)");
@@ -63,6 +64,7 @@ después llenamos los atributos del televisor.
         if (leer.next().equalsIgnoreCase("S")){
             sint = true;
         }
+        //OJO!!! no se puede llamar a calcularPrecioFinal en el constructor porque no se inicializaron todos los atrib.
         return new Televisor(resol, sint, e.getPrecio(), e.getColor(),e.getConsumoEnergetico(),e.getPeso());
     }
     /*
@@ -73,8 +75,8 @@ aumentará $500. Recuerda que las condiciones que hemos visto en la clase
 Electrodomestico también deben afectar al precio.
     */
     @Override
-    public void precioFinal(){
-        super.precioFinal(); //precio base + aumento según peso y consumo
+    public void calcularPrecioFinal(){
+        super.calcularPrecioFinal(); //precio base + aumento según peso y consumo
         
         if (resolucion > 40){
             setPrecio(getPrecio()*1.3);

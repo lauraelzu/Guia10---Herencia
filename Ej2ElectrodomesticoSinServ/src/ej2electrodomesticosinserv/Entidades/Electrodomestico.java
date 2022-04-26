@@ -124,7 +124,7 @@ consumo. Al precio se le da un valor base de $1000.
     • Método precioFinal(): según el consumo energético y su tamaño, aumentará
 el valor del precio. 
     */
-    public void precioFinal(){
+    public void calcularPrecioFinal(){
         Double aumento=0d;
         //según consumo
         switch (consumoEnergetico){

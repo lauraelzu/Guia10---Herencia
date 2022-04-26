@@ -6,22 +6,22 @@ package ej2electrodomesticosinserv;
 
 import ej2electrodomesticosinserv.Entidades.Lavadora;
 import ej2electrodomesticosinserv.Entidades.Televisor;
-//import ej2electrodomesticosinserv.Entidades.Televisor;
+
 
 public class Ej2ElectrodomesticoSinServ {
 
     public static void main(String[] args) {
         
-//        System.out.println("--------creando lavadora---------------");
-//        Lavadora l = new Lavadora();
-//        l=l.crearLavadora();
-//        System.out.println(l);
-//        System.out.println("Precio final de la Lavadora: $" + l.getPrecio());
+        System.out.println("--------creando lavadora---------------");
+        Lavadora l = new Lavadora(); //instanciar
+        l=l.crearLavadora();         //crear y asignar
+        System.out.println(l);       //mostrar para control
+        System.out.println("Precio final de la Lavadora: $" + l.getPrecio());
         
         System.out.println("--------creando TV---------------");
         Televisor tv = new Televisor();
         tv = tv.crearTelevisor();
-        tv.precioFinal();   //actualiza el precio porque en la clase no se donde mierda vva
+        tv.calcularPrecioFinal();   //actualiza el precio según resoluc y sintonizador
         System.out.println(tv);
         System.out.println("Precio final del televisor: $" + tv.getPrecio());
     }
