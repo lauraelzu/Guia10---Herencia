@@ -4,6 +4,8 @@ carga, además de los atributos heredados.
  */
 package ej2herenciaelectrodomesticos.Entidades;
 
+//final para cortar la herencia
+//extends porque Lavadora ES un tipo DE Electrodomestico
 public final class Lavadora extends Electrodomestico {
  
     private Integer carga;
@@ -13,13 +15,13 @@ public final class Lavadora extends Electrodomestico {
 • Un constructor vacío.
 • Un constructor con la carga y el resto de atributos heredados.
     */
-
+    
     public Lavadora() {
-        super();
+        super();  //hereda constructor vacío del padre
     }
 
     public Lavadora(Integer carga, Double precio, String color, char consumoEnergetico, Integer peso) {
-        super(precio, color, consumoEnergetico, peso);
+        super(precio, color, consumoEnergetico, peso);  //hereda constructor parametrizado del padre
         this.carga = carga;
     }
     

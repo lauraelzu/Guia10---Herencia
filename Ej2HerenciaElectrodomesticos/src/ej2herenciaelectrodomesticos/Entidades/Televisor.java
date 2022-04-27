@@ -13,6 +13,7 @@ heredados. Recuerda que debes llamar al constructor de la clase padre.
     */
 
     public Televisor() {
+        super();  //hereda constructor vacío del padre
     }
 
     public Televisor(Integer resolucion, boolean sintonizador, Double precio, String color, char consumoEnergetico, Integer peso) {

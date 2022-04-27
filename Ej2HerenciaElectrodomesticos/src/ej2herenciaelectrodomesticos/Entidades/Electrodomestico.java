@@ -5,6 +5,7 @@ precio, color, consumo energético (letras entre A y F) y peso.
 package ej2herenciaelectrodomesticos.Entidades;
 
 public class Electrodomestico {
+    //protected para que sólo las clases hijas accedan a estos atributos
     protected Double precio;
     protected String color;
     protected char consumoEnergetico;
@@ -16,9 +17,11 @@ public class Electrodomestico {
 • Un constructor con todos los atributos pasados por parámetro.
     */
     public Electrodomestico() {
+         this.precio = 1000d; //precio base <<<<<=========
     }
 
     public Electrodomestico(Double precio, String color, char consumoEnergetico, Integer peso) {
+   
         this.precio = precio;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
@@ -28,7 +31,9 @@ public class Electrodomestico {
     /*
     ***************Los métodos a implementar son:************
     
-• Métodos getters y setters de todos los atributos.
+• Métodos getters y setters de todos los atributos. 
+               "Si no son accedidos por clases que NO son hijas 
+                se pueden obviar los GETTER y SETTER en la superclase"
     */
     public Double getPrecio() {
         return precio;
@@ -66,7 +71,7 @@ public class Electrodomestico {
 
     @Override
     public String toString() {
-        return "precio=" + precio + ", color=" + color + ", consumoEnergetico=" + consumoEnergetico + ", peso=" + peso;
+        return "precio= $" + precio + ", color=" + color + ", consumoEnergetico=" + consumoEnergetico + ", peso=" + peso;
     }
     
     

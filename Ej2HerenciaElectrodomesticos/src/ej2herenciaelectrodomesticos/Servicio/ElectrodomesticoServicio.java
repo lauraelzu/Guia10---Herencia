@@ -46,7 +46,7 @@ consumo. Al precio se le da un valor base de $1000.
     public Electrodomestico crearElectrodomestico(){
         Electrodomestico e = new Electrodomestico();
         
-        e.setPrecio(1000d); //Al precio se le da un valor base de $1000.
+      //  e.setPrecio(1000d); //Al precio se le da un valor base de $1000 en el constructor vacio.
         
         System.out.println("=> Ingrese color del electrodoméstico (blanco/negro/rojo/azul/gris)");
         e.setColor(comprobarColor(leer.next()));
